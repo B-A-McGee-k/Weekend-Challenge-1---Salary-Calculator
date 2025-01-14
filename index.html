@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css">
   <title>Salary Calculator</title>
+  <script src="scripts/code.js"></script>
 </head>
 <body>
   <header>
@@ -20,9 +21,21 @@
   <input id="jobTitle" placeholder="Title" type="string"/>
   <input id="salary" placeholder="Salary" type="number"/>
 </form>
-
+<!--button to submit information-->
+<button type="button" onclick="submitEmployeeInfo()">Submit</button>
     <h2>Employees</h2>
     <!--this table will be used for the employee listing-->
+    <!--each row will have a delete button, the title row will clear all-->
+    <table>
+      <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Salary</th>
+      <th><button type="button" onclick="deleteEmployee(0)">Clear</button></th>
+      </tr>
+    </table>
   </main>
   <footer>
     <p>Total Monthly</p>
