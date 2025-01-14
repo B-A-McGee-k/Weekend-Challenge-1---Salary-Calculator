@@ -15,30 +15,32 @@
       <!--below is the input field to the employee table-->
     
 <form class="addEmployee-form">
-  <input id="fName" placeholder="First Name" type="string"/>
-  <input id="lName" placeholder="Last Name" type="string"/>
-  <input id="ID" placeholder="ID Number" type="number"/>
-  <input id="jobTitle" placeholder="Title" type="string"/>
-  <input id="salary" placeholder="Salary" type="number"/>
+  <input id="firstNameInput" placeholder="First Name" type="string"/>
+  <input id="lastNameInput" placeholder="Last Name" type="string"/>
+  <input id="idInput" placeholder="ID Number" type="number"/>
+  <input id="titleInput" placeholder="Title" type="string"/>
+  <input id="annualSalaryInput" placeholder="Salary" type="number"/>
 </form>
 <!--button to submit information-->
-<button type="button" onclick="submitEmployeeInfo()">Submit</button>
+<button type="button" onclick="submitEmployeeInfo() "data-testid="submitButton">Submit</button>
     <h2>Employees</h2>
     <!--this table will be used for the employee listing-->
     <!--each row will have a delete button, the title row will clear all-->
-    <table id="employeeTable">
-      <tr>
+    <table class="employee-information">
+      <thead><tr>
       <th>First Name</th>
       <th>Last Name</th>
-      <th>ID</th>
+      <th>ID Number</th>
       <th>Title</th>
       <th>Salary</th>
-      <th><button type="button" onclick="deleteEmployee(0)">Clear</button></th>
-      </tr>
+      <th><button type="button" onclick="deleteEmployee(event, 0)">Clear</button></th>
+      </tr></thead>
+      <tbody id="employeeTableBody">
+      </tbody>
     </table>
   </main>
   <footer>
-    <p>Total Monthly</p>
+    <p class="monthlyCost">Total Monthly: <h5 class="display"></h5></p>
   </footer>
 </body>
 </html>
