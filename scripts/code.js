@@ -17,8 +17,6 @@ function submitEmployeeInfo (button) {
     })
     console.log(employeeInfo)
     console.log(employeeTable())
-
-    console.log(employeeInfo[0].firstName)
 };
 
 function deleteEmployee (number) {
@@ -34,11 +32,23 @@ function deleteEmployee (number) {
         console.log(' ', employeeInfo[number].firstName, ' was deleted.')
         console.log(employeeInfo)
     };
-
+    console.log(employeeTable)
 }
 
+//This function should generate the table of employees, adding to the existing element
 function employeeTable () {
     console.log('Table is about to update!')
+    var table = document.getElementById("employeeTable")
+    var newRow = table.insertRow(0);
+//need to have it loop through all of the objects in array
+    for (let i = 0; i < employeeInfo.length; i++) {
+    newRow.insertCell(0).innerHTML = employeeInfo[i].firstName
+    newRow.insertCell(1).innerHTML = employeeInfo[i].lastName
+    newRow.insertCell(2).innerHTML = employeeInfo[i].identification
+    newRow.insertCell(3).innerHTML = employeeInfo[i].title
+    newRow.insertCell(4).innerHTML = employeeInfo[i].annualSalary
+    newRow.insertCell(5).innerHTML = `<button type="button" onclick="deleteEmployee(0)>Delete</button>`
+    }
 }
 
 
