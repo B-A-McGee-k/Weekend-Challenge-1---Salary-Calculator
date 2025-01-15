@@ -59,7 +59,7 @@ function deleteEmployee (event, number) {
         console.log(' employee info cleared!')
         const table = document.getElementById("employeeTableBody");
         const removeIt = table.rows.length;
-        for (i = 0; i < removeIt + 5; i + 1) {
+        for (let i = 0; i < removeIt + 5; i + 1) {
         document.getElementById("employeeTableBody").deleteRow(i);
         };
         
