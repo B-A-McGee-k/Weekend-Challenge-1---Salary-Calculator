@@ -1,0 +1,10 @@
+This is a simple to do list:
+-update the .html to have a table to host the information information
+    This will have 5 inputs and a submit button
+    When this submit button is clicked, it needs to do these things
+        -add the new data
+        -re-calculate the monthly costs
+        -clear the inputs of the form
+        -check for over-budget, apply a CSS to the footer if true
+        -add a delete or remove button onto the employees
+

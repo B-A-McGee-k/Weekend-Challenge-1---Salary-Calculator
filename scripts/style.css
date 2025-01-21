@@ -1,0 +1,13 @@
+table, th, td {
+    border: 1px solid black;
+  }
+over-budget {
+    background-color: yellow;
+
+}
+header {
+    background-color: gray;
+    text-align: center;
+    color: white;
+    font-size: x-large;
+}
